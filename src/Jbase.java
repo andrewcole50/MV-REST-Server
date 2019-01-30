@@ -74,9 +74,9 @@ class Jbase {
 		for (int i = 0; i < length; i++) {
 			if (i < jsonParams.size()) {
 				if (jsonParams.get(i).isJsonArray()) {
-					params.add(JSONtoMV(jsonParams.get(i).toString()));
+					params.add(JSONtoMV(jsonParams.get(i).getAsString()));
 				} else {
-					params.add(new JDynArray(jsonParams.get(i).toString()));
+					params.add(new JDynArray(jsonParams.get(i).getAsString()));
 				}
 			} else {
 				params.add(new JDynArray(""));
